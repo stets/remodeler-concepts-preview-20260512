@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Private Homepage Concept — KBI Kitchen and Bath Innovations</title>
+  <style>
+    :root {
+      --ink: #20231f;
+      --muted: #687066;
+      --paper: #fbf8f1;
+      --surface: #ffffff;
+      --line: #ded6c8;
+      --accent: #9b5a28;
+      --accent-dark: #633819;
+      --sage: #dfe7d7;
+      --charcoal: #242823;
+      --cream: #f3eadc;
+      --radius: 24px;
+      --shadow: 0 20px 55px rgba(32,35,31,.13);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--ink); line-height: 1.5; }
+    a { color: inherit; }
+    .wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+    .notice { background: var(--charcoal); color: #f8efe2; font-size: 13px; padding: 8px 0; }
+    .topbar { padding: 16px 0; border-bottom: 1px solid rgba(32,35,31,.08); background: rgba(251,248,241,.94); position: sticky; top: 0; backdrop-filter: blur(12px); z-index: 5; }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { font-weight: 850; letter-spacing: -.035em; font-size: clamp(19px, 2vw, 25px); }
+    .brand span { color: var(--accent); }
+    .navlinks { display: flex; gap: 22px; color: var(--muted); font-size: 14px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 20px; border-radius: 999px; background: var(--accent); color: white; text-decoration: none; font-weight: 780; box-shadow: 0 10px 24px rgba(155,90,40,.22); border: 0; }
+    .btn.secondary { background: var(--charcoal); box-shadow: none; }
+    .btn.light { background: #fff; color: var(--charcoal); box-shadow: none; }
+    .hero { padding: 72px 0 50px; }
+    .hero-grid { display: grid; grid-template-columns: 1.02fr .98fr; gap: 44px; align-items: center; }
+    .eyebrow { display: inline-flex; gap: 8px; align-items: center; padding: 8px 12px; border-radius: 999px; background: var(--sage); color: #3f4a3b; font-weight: 760; font-size: 13px; margin-bottom: 22px; }
+    h1 { margin: 0; font-size: clamp(44px, 6vw, 78px); line-height: .93; letter-spacing: -.07em; max-width: 800px; }
+    .lead { margin: 24px 0 30px; font-size: 20px; color: var(--muted); max-width: 650px; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+    .trust-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; color: var(--muted); font-size: 14px; }
+    .trust-row span { padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,.66); }
+    .photo-card { background: var(--surface); border: 1px solid var(--line); border-radius: 34px; padding: 14px; box-shadow: var(--shadow); transform: rotate(1deg); }
+    .photo { min-height: 430px; border-radius: 26px; background: linear-gradient(135deg, rgba(155,90,40,.86), rgba(36,40,35,.78)), radial-gradient(circle at 23% 18%, #f7e1bd 0 12%, transparent 38%), linear-gradient(145deg, #d5baa0, #6d4a35); display: flex; align-items: end; padding: 26px; color: white; overflow: hidden; }
+    .photo strong { display:block; font-size: 30px; line-height: 1; letter-spacing: -.035em; }
+    .photo small { display:block; opacity:.86; margin-top: 8px; max-width: 360px; }
+    .quote-strip { margin-top: -10px; }
+    .quote-panel { background: white; border: 1px solid var(--line); border-radius: 28px; box-shadow: 0 14px 40px rgba(32,35,31,.08); padding: 22px; display:grid; grid-template-columns: 1.1fr .9fr auto; gap: 18px; align-items: center; }
+    .quote-panel b { display:block; font-size: 18px; letter-spacing: -.02em; }
+    .quote-panel p { margin: 3px 0 0; color: var(--muted); font-size: 14px; }
+    .section { padding: 64px 0; }
+    .section h2 { font-size: clamp(32px, 4vw, 52px); line-height: 1; letter-spacing: -.055em; margin: 0 0 18px; }
+    .section-intro { color: var(--muted); font-size: 18px; max-width: 700px; margin-bottom: 32px; }
+    .cards { display:grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; box-shadow: 0 8px 26px rgba(32,35,31,.06); }
+    .card h3 { margin:0 0 10px; font-size: 21px; letter-spacing: -.025em; }
+    .card p { margin:0; color: var(--muted); }
+    .split { display:grid; grid-template-columns: .9fr 1.1fr; gap: 28px; align-items: start; }
+    .focus-box { background: var(--charcoal); color:white; border-radius: 30px; padding: 34px; position: sticky; top: 92px; }
+    .focus-box h2 { color:white; }
+    .steps { display:grid; gap: 14px; }
+    .step { display:grid; grid-template-columns: 48px 1fr; gap: 16px; background:white; border: 1px solid var(--line); border-radius: 20px; padding: 18px; }
+    .num { width: 48px; height: 48px; border-radius: 50%; background: var(--sage); display:flex; align-items:center; justify-content:center; font-weight:850; }
+    .cta-band { margin: 54px 0; background: linear-gradient(135deg, var(--accent-dark), var(--accent)); color:white; border-radius: 34px; padding: 44px; display:flex; justify-content:space-between; align-items:center; gap: 30px; }
+    .cta-band h2 { margin:0; color:white; max-width: 670px; }
+    footer { padding: 34px 0 50px; color: var(--muted); font-size: 13px; }
+    .disclaimer { border-top: 1px solid var(--line); padding-top: 18px; color:#7a746a; }
+    @media (max-width: 880px) {
+      .navlinks { display:none; }
+      .hero-grid, .split, .cards, .quote-panel { grid-template-columns: 1fr; }
+      .hero { padding-top: 44px; }
+      .photo { min-height: 310px; }
+      .cta-band { display:block; padding: 30px; }
+      .cta-band .btn { margin-top: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="notice"><div class="wrap">Private concept draft for internal review only · noindex/nofollow · not affiliated with KBI Kitchen and Bath Innovations</div></div>
+  <header class="topbar">
+    <div class="wrap nav">
+      <div class="brand">KBI <span>Concept</span></div>
+      <nav class="navlinks" aria-label="Concept navigation">
+        <a href="#services">Services</a>
+        <a href="#proof">Proof</a>
+        <a href="#quote">Request Quote</a>
+      </nav>
+      <a class="btn secondary" href="#quote">Schedule a Consultation</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Cincinnati kitchen + bath remodeling</div>
+          <h1>Rooms you want to show off, with a quote path homeowners can find fast.</h1>
+          <p class="lead">A project-first homepage direction for KBI: keep the premium kitchen photography and decades-of-experience trust, but make consultation requests more direct than a virtual-design-tool-only path.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#quote">Request a Remodeling Consultation</a>
+            <a class="btn secondary" href="tel:15136318210">Call (513) 631-8210</a>
+          </div>
+          <div class="trust-row">
+            <span>Kitchen remodels</span>
+            <span>Bathroom renovations</span>
+            <span>50+ years mentioned on current site</span>
+          </div>
+        </div>
+        <div class="photo-card">
+          <div class="photo">
+            <div><strong>Lead with finished work.</strong><small>Hero image slot reserved for KBI’s strongest real kitchen or bath project photo, not stock imagery.</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote-strip wrap" aria-label="Early quote path concept">
+      <div class="quote-panel">
+        <div><b>Make the next step obvious.</b><p>Instead of asking every visitor to start with a design tool, offer a direct consultation path for high-intent remodel leads.</p></div>
+        <div><b>Keep the design tool.</b><p>Use it as a secondary option for browsers who are still exploring ideas.</p></div>
+        <a class="btn" href="#quote">Start with a quote</a>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="wrap">
+        <h2>Make services easy to scan before visitors scroll.</h2>
+        <p class="section-intro">The current site has useful service and project content. This concept compresses the first impression around what homeowners need to know quickly: what KBI remodels, why to trust them, and how to start.</p>
+        <div class="cards">
+          <article class="card"><h3>Kitchen Remodeling</h3><p>Cabinets, counters, layout changes, and full kitchen transformations presented with project photography and a quote CTA.</p></article>
+          <article class="card"><h3>Bathroom Renovations</h3><p>Show shower, vanity, tile, and full-bath updates with the same direct consultation path.</p></article>
+          <article class="card"><h3>Design Guidance</h3><p>Reframe the virtual design tool as one helpful step inside a clearer start-to-finish remodel process.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="proof" class="section">
+      <div class="wrap split">
+        <aside class="focus-box"><h2>Concept focus</h2><p>This direction preserves the polished feel of the current homepage while tightening conversion hierarchy: one primary CTA, portfolio proof higher up, and a short quote path before the long-scroll form.</p></aside>
+        <div class="steps">
+          <div class="step"><div class="num">1</div><div><h3>Project proof first</h3><p>Use the strongest finished kitchen/bath photo above the fold, then link to the full inspiration gallery.</p></div></div>
+          <div class="step"><div class="num">2</div><div><h3>Consultation CTA first</h3><p>Make “Request a Remodeling Consultation” the dominant action; keep “Begin Your Design” as a secondary exploration path.</p></div></div>
+          <div class="step"><div class="num">3</div><div><h3>Trust without clutter</h3><p>Bring testimonials, years in business, phone number, and service area into scannable trust markers near the top.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="quote" class="wrap">
+      <div class="cta-band">
+        <h2>Private concept CTA: turn the polished homepage into a clearer quote-request path.</h2>
+        <a class="btn light" href="https://www.k-binnovations.com/contact">Request a Quote</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap disclaimer">
+      Concept redesign preview only. Not affiliated with or endorsed by KBI Kitchen and Bath Innovations. Not publicly marketed. Created as a private local draft for outreach experiment review.
+    </div>
+  </footer>
+</body>
+</html>
